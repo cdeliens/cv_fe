@@ -1,6 +1,42 @@
-.span
-  %h1{ 'ng-repeat' => ' post in posts'}
-    {{post.title}}
-  
-  %h2
-    {{post.title}}
+.span4
+  .logo
+    = image_tag "/images/logo/logo.png"
+  %h3
+    Personal Blog (en español)
+  %ul.nav.nav-tabs.nav-stacked
+    %li{ 'ng-repeat' => ' post in posts_menu '}
+      %a{'ng-click' => 'get_blogs()'}
+        %h4
+          %i{class: "icon-edit"}
+          {{post.title}}
+  %hr        
+  %a{'ng-click' => 'get_curriculum()'}
+    %h3
+      About Me
+  %ul.nav.nav-pills
+    %li
+      %a{class: 'linkedin social', href: "http://www.linkedin.com/in/delienschristian", target: '_blank'}
+    %li
+      %a{class: 'github social', href: "https://github.com/cdeliens", target: '_blank'}
+    %li
+      %a{class: 'twitter social', href: "https://twitter.com/cdeliensn", target: '_blank'}
+
+  %hr
+    %li
+      %a
+        Contact
+        %h5
+          Skype: cdn.deliens
+        %h5
+          Email: chris@25este.com          
+
+.span8
+  %span{ 'ng-repeat' => ' post in posts '}
+    %h1
+      {{post.title}}
+    %h3
+      {{post.humanize_date}}
+    %br
+    %span{'ng-bind-html-unsafe' => 'post.body'}
+    %hr
+    

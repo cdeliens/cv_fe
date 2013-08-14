@@ -1,2 +1,48 @@
+body
+  background: #f9f9f9
+  color: black
+.logo
+  margin-top: 5%
+  width: 100%
+  background-repeat: no-repeat
+
+h1, h2, h3, h4, h5, p, a, span, div, body
+  font-family: 'Neuton', serif
+  text-shadow: -1px -1px 1px rgba(150, 150, 150, 0.15)
+
+$font-size: 1.5em
+h1
+  font-size: 5em
+  line-height: 1em
+p
+  font-size: $font-size
+  line-height: $font-size
+  text-align: justify
 a
-  color: white !important
+  color: black
+  &:hover
+    cursor: pointer
+    text-decoration: none
+    color: black
+
+li
+  list-style: none
+
+.nav
+  margin: 0px
+  li
+    i
+      margin-top: 6px
+    a
+      color: black
+      font-size: $font-size
+      line-height: $font-size
+      &.social
+        height: 38px
+        width: 38px
+      &.linkedin
+        background: url("/images/linkedin/linkedin-64-black.png")
+      &.twitter
+        background: url("/images/twitter/twitter-64-black.png")
+      &.github
+        background: url("/images/github/github-64-black.png")
